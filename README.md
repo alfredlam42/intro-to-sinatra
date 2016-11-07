@@ -74,7 +74,7 @@ To access that variable, you need to use the 'params' variable in the code block
 
 ```ruby
 GET /user/:id do
-  params[:id] //this would be equal to 13413 in our example
+  params[:id] #this would be equal to 13413 in our example
 end
 ```
 
