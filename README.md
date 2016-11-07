@@ -34,6 +34,8 @@ Shotgun is a Ruby gem that helps automatically restart the server when you make 
 
 Sometimes it might take a while for the changes to occur because the server is still working on the changes. If you reload and nothing changed, wait one or two more seconds then reload it again.
 
+__Any changes you make to any file not in the app directory will require you to restart your server manually.__
+
 ## The Controller
 
 The controller is the person who is handling all your requests. When you ask for something, it'll give you something back.
@@ -66,7 +68,7 @@ For every model you have, there should be a directory in the _views_ directory w
 
 It's an object that contains information about itself. All the things you worked on with classes in Phase 1 is applied to models.
 
-This is all stored in a database. We'll be using Postgres.
+This is all stored in a database. We'll be using Postgres/ActiveRecord.
 
 ## Setting Up Your Database
 
@@ -98,7 +100,9 @@ bundle exec rake generate:model NAME=<name>
 
 ### Run Your Migration
 
-Every time you create a new migration and model, you need to run a migration so your database knows what will be in it.
+You need to run a migration so your database knows what will be in it.
+
+Every time you create a new migration and model, you just run the migration command. Everything created in the previous migration won't be over written.
 ```
 bundle exec rake db:migrate
 ```
@@ -137,7 +141,7 @@ Two exceptions I can think of:
 1. If you just started and just testing, it's fine to drop and recreate it.
 2. If you're running out of time on your assessment, go ahead and do this. (But if you know how to do it, it wouldn't really take much time to begin with).
 
-## Other Things To Do
+## Other Things
 
 ### Adding Gems
 
@@ -146,3 +150,9 @@ Very simple. It's exactly what you have done in Phase 1 so it isn't anything new
 1. Add the name of the gem in _Gemfile_.
 2. Go to the terminal and type _bundle install_.
 3. Go to _/config/environment.rb_ and require the name of the gem.
+
+### Routing Stuff To Remember
+
+1. GET routes always return a view or partial. The only exception is the '/' route. You might want to redirect it somewhere else.
+2. POST, PUT, DELETE always redirect to another __route__.
+3. Always put more specific routes higher up on the controller.
