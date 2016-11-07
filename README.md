@@ -58,9 +58,29 @@ The controller is the person who is handling all your requests. When you ask for
 
 Because everything is already set up for you in the skeleton, you can create as many controller file as you want in the controller directory. You don't need to require it anywhere when you add new ones.
 
+Even though every model has their own file for the controller, you still need to name the routes differently. When the code is compiled and ran, think of all the controllers being in one giant file.
+
+If you have the route '/' in the index controller and the route '/' in the user controller file, it can cause conflict. The controller will only give you one of them. It doesn't automatically make it '/user' even though it's in the user controller file. You'll have to do it yourself.
+
+In addition, you can have variables in your routes. You just need to have semi-colons in front of the word.
+
+```
+/user/:id
+```
+
+You wouldn't go to http://www.website.com/user/:id. It would most likely be http://www.website.com/user/13413.
+
+To access that variable, you need to use the 'params' variable in the code block of the controller.
+
+```ruby
+GET /user/:id do
+  params[:id] //this would be equal to 13413 in our example
+end
+```
+
 ### Things To Remember
 
-For every model you have, you should have a controller for it.
+For every model you have, you should have a controller file for it.
 
 ## The View
 
