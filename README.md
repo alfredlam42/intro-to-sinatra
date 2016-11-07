@@ -28,6 +28,22 @@ The _config.ru_ file here as well as the files in the _config_ directory sets up
 
 That is all there is to it since you have the skeleton. It has the main route and a very plain HTML file related to it.
 
+Make sure you shutdown your server with __CTRL + C__. Don't ever just close the window. The server will continue to run if you do this so if you try to start your server again, you'll get an error.
+
+### To Kill A Server
+
+You will need to find the process ID of the shotgun server. Use this command:
+
+```
+ps | grep shotgun
+```
+
+This will return all processes that has the word shotgun in it, including the grep. Now you want to force quit the process with this command:
+
+```
+kill -9 <process id>
+```
+
 ### What Is Shotgun And What Does It Do?
 
 Shotgun is a Ruby gem that helps automatically restart the server when you make changes to your HTML, CSS, JS, model, or controller files. If you don't have Shotgun, you would have to go to the terminal, stop your server, and start it up again. It gets annoying if you forget and wonder why your changes aren't taking place. So it's good to have Shotgun.
@@ -85,6 +101,8 @@ It's an object that contains information about itself. All the things you worked
 
 This is all stored in a database. We'll be using Postgres/ActiveRecord.
 
+All the associations you've worked on in Phase 1 will be written in the model file.
+
 ## Setting Up Your Database
 
 ### How To Create A Database
@@ -118,6 +136,7 @@ bundle exec rake generate:model NAME=<name>
 You need to run a migration so your database knows what will be in it.
 
 Every time you create a new migration and model, you just run the migration command. Everything created in the previous migration won't be over written.
+
 ```
 bundle exec rake db:migrate
 ```
@@ -139,17 +158,17 @@ There are a few things to remember when working with a database. If you ever won
 
 Very self explanatory.
 
-#### Make sure you migrate.
+#### Make sure you migrate and check it is successful.
 
-Self explanatory again.
+Self explanatory again. I've helped many people and found that there was some kind of error when they migrate. They run the migrate command and think it's fine and when they see there is an error, they wonder what is going on.
 
-#### Seed your database (optional).
+#### Seed your database and make sure it is successful (optional).
 
-If you wonder why nothing is showing up.
+If you wonder why all your seed data isn't showing up.
 
 #### Never Drop Your Database
 
-Treat it as if it had millions of user information in it. If you need to update a property in an already existing model, run a migration. It's important to learn how to update models with new information. If you work at Facebook, you won't drop a database to give it new properties. You would create a migration. It's just good practice instead of taking the shortcut of dropping and recreating the database.
+Treat it as if it had millions of user's information in it. If you need to update a property in an already existing model, run a migration. It's important to learn how to update models with new information. If you work at Facebook, you won't drop a database to give it new properties. You would create a migration. It's just good practice instead of taking the shortcut of dropping and recreating the database.
 
 Two exceptions I can think of:
 
