@@ -3,7 +3,7 @@
 ## What Is Sinatra?
 
 ```
-_"Sinatra is a free and open source software web application library and domain-specific language written in Ruby."_ -Wikipedia
+"Sinatra is a free and open source software web application library and domain-specific language written in Ruby." -Wikipedia
 ```
 
 The focus of Sinatra is to allow you to quickly get a dynamic website up and running with minimal effort.
@@ -40,15 +40,15 @@ The controller is the person who is handling all your requests. When you ask for
 
 Because everything is already set up for you in the skeleton, you can create as many controller file as you want in the controller directory. You don't need to require it anywhere when you add new ones.
 
-#### Things To Remember
+### Things To Remember
 
-__For every model you have, you should have a controller for it.__
+For every model you have, you should have a controller for it.
 
 ## The View
 
 The view is the thing you see on your browser, the HTML file.
 
-#### What Is The layout.html File?
+### What Is The layout.html File?
 
 This file is what is going to be loaded every time you load a view.
 
@@ -56,11 +56,11 @@ See the part in the HTML that has <%= yield %>?
 
 A simple way to explain what is happening is that you're copying all the HTML in your view file and pasting it where the yield is. That is actually what is being returned to you from the controller.
 
-#### Things To Remember
+### Things To Remember
 
-__For every GET route in your controller, you should have a view for it.__
+For every GET route in your controller, you should have a view for it.
 
-__For every model you have, there should be a directory in the _views_ directory with the same name as that model.__
+For every model you have, there should be a directory in the _views_ directory with the same name as that model.
 
 ## Adding Gems
 
