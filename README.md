@@ -81,13 +81,21 @@ __<%= %>__ is used when you want to use Ruby and want people to see it.
 <% end %>
 ```
 
-### What Is The layout.html File?
+### What Is The layout.erb File?
 
 This file is what is going to be loaded every time you load a view.
 
 See the part in the HTML that has <%= yield %>?
 
 A simple way to explain what is happening is that you're copying all the HTML in your view file and pasting it where the yield is. That is actually what is being returned to you from the controller.
+
+Something most people put in the layout file is the navigation bar. It's something you want on every page that loads.
+
+### What Is A Partial?
+
+As the name implies, it is a part of a bigger piece of the website. If there is a piece of HTML you want to use over and over again, you would put it inside a partial so you don't have to write it again and again (or copy and paste).
+
+You don't have to worry about this for now, but you'll use it later when you learn AJAX.
 
 ### Things To Remember
 
