@@ -80,9 +80,11 @@ end
 
 ### Things To Remember
 
+Restful routing.
+
 For every model you have, you should have a controller file for it.
 
-Put more specific routes at the top and anything with the params lower.
+Put more specific routes at the top and anything with the params lower (do this after you master restful routing).
 
 ## The View
 
@@ -219,6 +221,7 @@ Very simple. It's exactly what you have done in Phase 1 so it isn't anything new
 
 ### Routing Stuff To Remember
 
-1. GET routes always return a view or partial. The only exception is the '/' route. You might want to redirect it somewhere else.
-2. POST, PUT, DELETE always redirect to another __route__.
-3. Always put more specific routes higher up on the controller.
+1. Remember restful routing.
+2. GET routes always return a view or partial. The only exception is the '/' route. You might want to redirect it somewhere else.
+3. POST, PUT, DELETE always redirect to another __route__.
+4. Always put more specific routes higher up on the controller.
