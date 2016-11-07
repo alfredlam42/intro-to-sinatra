@@ -82,6 +82,8 @@ end
 
 For every model you have, you should have a controller file for it.
 
+Put more specific routes at the top and anything with the params lower.
+
 ## The View
 
 The view is the thing you see on your browser, the HTML file. But for Sinatra, we will be using ERB (embedded Ruby) files. This will allow us to use Ruby while as we use HTML. To use Ruby in the ERB file, you need to use what everyone here call snow cones.
