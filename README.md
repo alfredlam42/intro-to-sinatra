@@ -68,7 +68,7 @@ In addition, you can have variables in your routes. You just need to have semi-c
 /user/:id
 ```
 
-You wouldn't go to http<nolink>://www.website.com/user/:id. It would most likely be http<nolink>://www.website.com/user/13413.
+You wouldn't go to `http://www.website.com/user/:id`. It would most likely be `http://www.website.com/user/13413`.
 
 To access that variable, you need to use the 'params' variable in the code block of the controller.
 
