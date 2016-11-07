@@ -125,6 +125,8 @@ For every GET route in your controller, you should have a view for it.
 
 For every model you have, there should be a directory in the _views_ directory with the same name as that model.
 
+Don't nest partials. It's a headache to deal with. If you want to try, go ahead.
+
 ## The Model
 
 It's an object that contains information about itself. All the things you worked on with classes in Phase 1 is applied to models.
