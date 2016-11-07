@@ -21,14 +21,14 @@ The _config.ru_ file here as well as the files in the _config_ directory sets up
 3. Copy and paste all the files into the directory of your choosing.
 4. Change the README title to your project.
 
-## Starting Your Server
+## Starting A Simple Server
 
 1. _bundle install_
 2. _bundle exec shotgun_
 
 That is all there is to it since you have the skeleton. It has the main route and a very plain HTML file related to it.
 
-## What Is Shotgun And What Does It Do?
+### What Is Shotgun And What Does It Do?
 
 Shotgun is a Ruby gem that helps automatically restart the server when you make changes to your HTML, CSS, JS, model, or controller files. If you don't have Shotgun, you would have to go to the terminal, stop your server, and start it up again. It gets annoying if you forget and wonder why your changes aren't taking place. So it's good to have Shotgun.
 
@@ -61,6 +61,54 @@ A simple way to explain what is happening is that you're copying all the HTML in
 For every GET route in your controller, you should have a view for it.
 
 For every model you have, there should be a directory in the _views_ directory with the same name as that model.
+
+## The Model
+
+It's an object that contains information about itself. All the things you worked on with classes in Phase 1 is applied to models.
+
+This is all stored in a database. We'll be using Postgres.
+
+### How To Create A Database
+
+We have a _Rakefile_. It contains a bunch of commands that'll help us create the database, migrations, and models easily.
+
+To see a lists of all your rake commands:
+```
+bundle exec rake -T
+```
+
+To create your database:
+```
+bundle exec rake db:create
+```
+
+### What Is A Migration And How To Create One
+
+A migration is a file that tells the database what properties the model (or class) will have.
+```
+bundle exec rake genereate:migration NAME=<name>
+```
+
+### How To Create A Model
+```
+bundle exec rake generate:model NAME=<name>
+```
+
+### Run Your Migration
+
+Every time you create a new migration and model, you need to run a migration so your database knows what will be in it.
+```
+bundle exec rake db:migrate
+```
+
+### Seed Your Database
+
+If you want to fill your database with fake information for testing, you'll need to seed it. Check the seed file in the __db__ directory. It starts off blank and you just need to start writing Ruby code to create a new object.
+
+Seed it with this command:
+```
+bundle exec rake db:seed
+```
 
 ## Adding Gems
 
