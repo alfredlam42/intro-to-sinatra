@@ -48,7 +48,22 @@ For every model you have, you should have a controller for it.
 
 ## The View
 
-The view is the thing you see on your browser, the HTML file.
+The view is the thing you see on your browser, the HTML file. But for Sinatra, we will be using ERB (embedded Ruby) files. This will allow us to use Ruby while as we use HTML. To use Ruby in the ERB file, you need to use what everyone here call snow cones.
+
+### Snow Cones - <% %> & <%= %>: What's The Difference?
+
+__<% %>__ is used when you just want to use Ruby code without people seeing it.
+
+```
+<% list.each do |item| %>
+```
+
+__<%= %>__ is used when you want to use Ruby and want people to see it.
+```
+<% list.each do |item| %>
+  <%= item.name %>
+<% end %>
+```
 
 ### What Is The layout.html File?
 
