@@ -68,6 +68,8 @@ It's an object that contains information about itself. All the things you worked
 
 This is all stored in a database. We'll be using Postgres.
 
+## Setting Up Your Database
+
 ### How To Create A Database
 
 We have a _Rakefile_. It contains a bunch of commands that'll help us create the database, migrations, and models easily.
@@ -110,7 +112,34 @@ Seed it with this command:
 bundle exec rake db:seed
 ```
 
-## Adding Gems
+### Things To Remember
+
+There are a few things to remember when working with a database. If you ever wonder why it isn't working or why there are errors, here are a few things to remember.
+
+#### Make sure your create your database.
+
+Very self explanatory.
+
+#### Make sure you migrate.
+
+Self explanatory again.
+
+#### Seed your database (optional).
+
+If you wonder why nothing is showing up.
+
+#### Never Drop Your Database
+
+Treat it as if it had millions of user information in it. If you need to update a property in an already existing model, run a migration. It's important to learn how to update models with new information. If you work at Facebook, you won't drop a database to give it new properties. You would create a migration. It's just good practice instead of taking the shortcut of dropping and recreating the database.
+
+Two exceptions I can think of:
+
+1. If you just started and just testing, it's fine to drop and recreate it.
+2. If you're running out of time on your assessment, go ahead and do this. (But if you know how to do it, it wouldn't really take much time to begin with).
+
+## Other Things To Do
+
+### Adding Gems
 
 Very simple. It's exactly what you have done in Phase 1 so it isn't anything new.
 
