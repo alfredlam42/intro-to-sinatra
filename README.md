@@ -35,7 +35,7 @@ Make sure you shutdown your server with __CTRL + C__. Don't ever just close the 
 You will need to find the process ID of the shotgun server. Use this command:
 
 ```
-ps | grep shotgun
+ps aux | grep shotgun
 ```
 
 This will return all processes that has the word shotgun in it, including the grep. Now you want to force quit the process with this command:
