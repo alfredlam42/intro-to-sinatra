@@ -1,0 +1,7 @@
+<form method='POST' action='/trainer/<%= @trainer.id %>'>
+  <input type="hidden" name="_method" value="put" />
+  Name: <input name='trainer[name]' value="<%= @trainer.name %>"></input>
+  Age: <input name='trainer[age]' value="<%= @trainer.age %>"></input>
+  Gender: <input name='trainer[gender]' value="<%= @trainer.gender %>"></input>
+  <input type='submit'></input>
+</form>

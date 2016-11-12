@@ -1,0 +1,2 @@
+get '/pokemon' do
+end

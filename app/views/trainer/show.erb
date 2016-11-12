@@ -1,0 +1,8 @@
+<p> Name: <%= @trainer.name %> </p>
+<p> Gender: <%= @trainer.gender %></p>
+<p> Age: <%= @trainer.age %></p>
+
+<form method='POST' action='/trainer/<%= @trainer.id %>'>
+  <input type="hidden" name="_method" value="delete" />
+  <input type='submit' value='delete'></input>
+</form>
