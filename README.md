@@ -157,7 +157,7 @@ bundle exec rake db:create
 
 A migration is a file that tells the database what properties the model (or class) will have.
 ```
-bundle exec rake genereate:migration NAME=<name>
+bundle exec rake generate:migration NAME=<name>
 ```
 
 ### How To Create A Model
