@@ -1,1 +1,8 @@
-this is the show file for <%= @asdf %>
+<h2><%= @pokemon.name %></h2>
+<h3><%= @pokemon.affinity %></h3>
+
+<a href="/pokemon/<%=@pokemon.id%>/edit">Edit</a>
+<form method="POST" action="/pokemon/<%= @pokemon.id %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete">
+</form>

@@ -1,0 +1,6 @@
+<form method="POST" action="/pokemon/<%= @pokemon.id%>">
+  <input type="hidden" name="_method" value="PUT">
+  Name <input type="text" name="name" value="<%= @pokemon.name %>">
+  Type <input type="text" name="affinity" value="<%= @pokemon.affinity %>">
+  <input type="submit" value="Update">
+</form>

@@ -1,0 +1,7 @@
+<form method="POST" action="/pokemon">
+  Name: <input type="text" name="pokemonInfo[name]">
+  Type: <input type="text" name="pokemonInfo[affinity]">
+  <input type="submit" value="Create Pokemon">
+</form>
+
+<%= erb :'_asdf', locals {pokemon: {name: 'asdf'}} %>
