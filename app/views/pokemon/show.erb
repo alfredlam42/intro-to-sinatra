@@ -1,0 +1,6 @@
+<%= "#{@pokemon.name} is a #{@pokemon.affinity} Pokemon." %>
+
+<form action="/pokemon/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="delete" />
+  <button type="submit">Delete Pokemon</button>
+</form>
