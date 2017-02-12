@@ -1,0 +1,7 @@
+Here are all the Pokemons:
+
+<% @pokemons.each do |pokemon| %>
+  <p><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a> - <%= pokemon.affinity %></p>
+<% end %>
+
+<p><a href="/pokemon/new">Create A New Pokemon</a></p>

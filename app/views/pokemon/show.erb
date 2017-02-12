@@ -1,0 +1,10 @@
+Here is the information on <%= @pokemon.name %>:
+
+<p>Pokemon Type: <%= @pokemon.affinity %></p>
+
+<br /><a href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon Information</a>
+
+<form action="/pokemon/<%= @pokemon.id %>" method="POST">
+  <input type="hidden" name="_method" value="delete" />
+  <button type="submit">Delete This Pokemon</button>
+</form>
